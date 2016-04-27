@@ -39,7 +39,7 @@ function collectSwaggerDocs( swaggerUrl, apiBase, headers ) {
             docs.push(format('\t%s %s', apiDetails.description, apiDetails.path));
             docs.push(format('\t\tOperations:'));
             apiDetails.operations.forEach(( operation ) => {
-              //todo: check for clashes
+              // TODO: check for clashes
               const apiName = humps.camelize(operation.nickname[ 0 ].toLowerCase() + operation.nickname.slice(1));
               docs.push(format('\t\t\t%s.%s()', rootApiBlock, apiName));
               docs.push(format('\t\t\t%s %s', operation.method, operation.summary));
@@ -104,11 +104,11 @@ function validateUrlArgs( requiredArgs, args ) {
   if ( args.length !== requiredArgs.length ) {
     throw new Error(`${ requiredArgs.length } required, only recieved ${ args.length }. [ ${ requiredArgs.map(( arg ) => arg.name).join(',') } ]`);
   }
-  // type checking
+  // TODO: type checking
   Object.keys(args).forEach(( key ) => {
     for (var i = 0; i < requiredArgs.length; i++) {
       if ( key === requiredArgs[ i ].name ) {
-        // check type
+        // TODO: check type
       }
     }
   });
@@ -119,11 +119,11 @@ function validateBodyArgs( requiredArgs, body ) {
   if ( missingBodyArgs.length > 0 ) {
     throw new Error(`Missing body args [ ${ missingBodyArgs.join(',') } ]`);
   }
-  // type checking
+  // TODO: type checking
   Object.keys(body).forEach(( key ) => {
     for (var i = 0; i < requiredArgs.length; i++) {
       if ( key === requiredArgs[ i ].name ) {
-        // check type
+        // TODO: check type
       }
     }
   });
