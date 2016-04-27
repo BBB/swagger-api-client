@@ -1,7 +1,7 @@
 <h2 align="center">swagger-api-client</h2>
 
 <p align="center">
-An Isomorphic API client for <a href="http://swagger.io/"target="_blank">Swagger</a> based APIs card.io</a>
+An Isomorphic API client for <a href="http://swagger.io/"target="_blank">Swagger</a> based APIs</a>
 </p>
 
 <p align="center">
